@@ -1,0 +1,16 @@
+{
+  "node": {
+    "4028afd6019226277b276f5aca34260af9d5ef8b95": {
+      "workers": {
+        "app/fact-checker/page": {
+          "moduleId": "[project]/.next-internal/server/app/fact-checker/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/google-adsense-policy-checker.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/fact-checker/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}
