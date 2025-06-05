@@ -41,4 +41,3 @@ This is a Next.js application called FactFlow, with the brand name SVKFACTS. It 
     Open your web browser and navigate to the URL provided by the `npm run dev` command (e.g., `http://localhost:9002`). You should see the SVKFACTS website.
 
 You should now have the Next.js frontend running locally. If you decide to add AI features using Genkit in the future, you will need to run the Genkit development server as well.
-```
