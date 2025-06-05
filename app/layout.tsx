@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Toaster } from "@/components/ui/toaster";
-import Header from '@/components/common/Header';
+import { Toaster } from '../components/ui/toaster';
+import Header from '../components/common/Header';
 
 export const metadata: Metadata = {
   title: 'SVKFACTS - Interesting Facts Daily',
