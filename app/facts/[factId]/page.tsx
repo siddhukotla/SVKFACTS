@@ -1,13 +1,14 @@
-import { getFactById } from '@/data/facts';
-import { getAdsForPage } from '@/lib/ads';
-import type { Fact, Ad } from '@/lib/types';
-import { TOTAL_FACTS } from '@/lib/constants';
-import AdComponent from '@/components/ads/AdComponent';
-import { Button, buttonVariants } from "@/components/ui/button";
+import { getFactById } from '../../../data/facts';
+import { getAdsForPage } from '../../../lib/ads';
+import type { Fact, Ad } from '../../../lib/types';
+import { TOTAL_FACTS } from '../../../lib/constants';
+import AdComponent from '../../../components/ads/AdComponent';
+import { Button, buttonVariants } from '../../../components/ui/button';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '../../../components/ui/card';
 import { ArrowRight } from 'lucide-react';
+
 
 interface FactPageProps {
   params: {
@@ -15,8 +16,9 @@ interface FactPageProps {
   };
 }
 
-export default function FactPage({ params }: FactPageProps) {
-  const factId = parseInt(params.factId, 10);
+export default async function FactPage({ params }: FactPageProps) {
+  const { factId: factIdParam } = await params;
+  const factId = parseInt(factIdParam, 10);
 
   if (isNaN(factId) || factId < 1 || factId > TOTAL_FACTS) {
     notFound();
